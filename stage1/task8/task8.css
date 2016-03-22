@@ -23,7 +23,7 @@
 [class*='col-'] {
   float: left;
   min-height: 1px;
-  height: 50px;
+  height: 70px;
   background-color: #eee;
   outline-style: solid;
   outline-width: 1px;
