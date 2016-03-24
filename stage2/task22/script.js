@@ -11,9 +11,13 @@ function BinaryTree(data) {
   return this.root;
 }
 
+
+var all = [];
+
 function buildTree(level) {
   var rootElement = document.querySelector(".root");
   var root = BinaryTree(rootElement);
+  all.push(root);
   var queue = [];
   queue.push(root);
   for (var i = 1; i < level; i++) {
@@ -30,6 +34,7 @@ function buildTree(level) {
       var style = height + width + padding + "border-style:solid;border-width:1px;display:flex;align-items:center;"
       newElement.style = style;
       var newNode = new Node(newElement);
+      all.push(newNode);
       queue.push(newNode);
       p.children.push(newNode);
       p.data.appendChild(newElement);
@@ -40,37 +45,68 @@ function buildTree(level) {
   return root;
 }
 
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds) {
-      break;
+
+function colorNode(node) {
+  all.forEach(function(item) {
+    if (item === node) {
+      item.data.style.backgroundColor = 'red';
+    } else {
+      item.data.style.backgroundColor = '';
     }
-  }
+  });
 }
 
 function visit(node) {
-  node.data.style.backgroundColor = 'red';
-  if (node.parent !== null) {
-    sleep(1000);
-    node.parent.data.style.backgroundColor = '';
-  }
-  if (node.children.length === 0) {
-    sleep(1000);
-    node.data.style.backgroundColor = '';
-  }
+  setTimeout(function() {
+    colorNode(node);
+  }, (i++) * 1000);
 }
 
+// pre
 function preOrder(node) {
-  console.log(node);
   if (node !== undefined) {
     visit(node);
-    if (node.children.length === 2) {
-      preOrder(node.children[0]);
-      preOrder(node.children[1]);
-    };
+    if (node.children[0] !== undefined) preOrder(node.children[0]);
+    if (node.children[1] !== undefined) preOrder(node.children[1]);
   }
 }
 
+// mid 
+function midOrder(node) {
+  if (node !== undefined) {
+    if (node.children[0] !== undefined) midOrder(node.children[0]);
+    visit(node);
+    if (node.children[1] !== undefined) midOrder(node.children[1]);
+  }
+}
+
+// post 
+function postOrder(node) {
+  if (node !== undefined) {
+    if (node.children[0] !== undefined) postOrder(node.children[0]);
+    if (node.children[1] !== undefined) postOrder(node.children[1]);
+    visit(node);
+  }
+}
+
+var i = 1;
 var level = 4;
-buildTree(level);
+var root = buildTree(level);
+var preOrderButton = document.querySelector("#preOrder");
+var midOrderButton = document.querySelector("#midOrder");
+var postOrderButton = document.querySelector("#postOrder");
+preOrderButton.onclick = function() {
+  i = 1;
+  colorNode(null);
+  preOrder(root);
+}
+midOrderButton.onclick = function() {
+  i = 1;
+  colorNode(null);
+  midOrder(root);
+}
+postOrderButton.onclick = function() {
+  i = 1;
+  colorNode(null);
+  postOrder(root);
+}
