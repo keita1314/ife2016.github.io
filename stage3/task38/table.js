@@ -43,23 +43,36 @@ var datas = [{
 
 (function() {
 	'use strict';
-	window.createTable = function(schema, datas) {
-		var tableElement = document.querySelector('#ui-table');
-		schema.fields.forEach(function(field) {
-			var thead = document.createElement('thead');
-			var tableHeader = document.createElement('th');
-			thead.appendChild(tableHeader);
-			tableHeader.textContent = field.label;
-			tableElement.appendChild(tableHeader);
-		});
+	window.createTable = function(id, schema, datas) {
 		var table = {
 			schema: schema,
 			datas: datas,
 			init: function(schema, datas) {
-				var tbody = document.querySelector('tbody');
-				if (tbody && tbody.parentNode) {
-					tbody.parent.removeChild(tbody);
-				}
+				var that = this;
+				var tableElement = document.querySelector(id);
+				tableElement.innerHTML = '';
+				schema.fields.forEach(function(field) {
+					var thead = document.createElement('thead');
+					var tableHeader = document.createElement('th');
+					thead.appendChild(tableHeader);
+
+					tableHeader.textContent = field.label;
+					if (field.sortable) {
+						var up = document.createElement('i');
+						var down = document.createElement('i');
+						up.setAttribute('class', 'arrow-up');
+						down.setAttribute('class', 'arrow-down');
+						up.addEventListener('click', function() {
+							that.sort(field.name, 'asc', field.callback);
+						});
+						down.addEventListener('click', function() {
+							that.sort(field.name, 'desc', field.callback);
+						});
+						tableHeader.appendChild(up);
+						tableHeader.appendChild(down);
+					}
+					tableElement.appendChild(tableHeader);
+				});
 				var tbody = document.createElement('tbody');
 				datas.forEach(function(data) {
 					var tableRow = document.createElement('tr');
@@ -72,14 +85,18 @@ var datas = [{
 				});
 				tableElement.appendChild(tbody);
 			},
-			sort: function(sortKey, direction) {
-				this.datas.sort(function(a, b) {
-					if (direction === 'desc') {
-						return a[sortKey] > b[sortKey] ? -1 : 1;
-					} else {
-						return a[sortKey] < b[sortKey] ? -1 : 1;
-					}
-				});
+			sort: function(sortKey, direction, callback) {
+				if (callback) {
+					this.datas.sort(callback);
+				} else {
+					this.datas.sort(function(a, b) {
+						if (direction === 'desc') {
+							return a[sortKey] > b[sortKey] ? -1 : 1;
+						} else if (direction === 'asc') {
+							return a[sortKey] < b[sortKey] ? -1 : 1;
+						}
+					});
+				}
 				this.init(this.schema, this.datas);
 			}
 		};
@@ -87,3 +104,4 @@ var datas = [{
 		return table;
 	};
 })();
+var t = createTable('#ui-table', tableSchema, datas);
