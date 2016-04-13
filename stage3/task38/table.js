@@ -9,11 +9,10 @@
 				var that = this;
 				var tableElement = document.querySelector(id);
 				tableElement.innerHTML = '';
+				var thead = document.createElement('thead');
 				schema.fields.forEach(function(field) {
-					var thead = document.createElement('thead');
 					var tableHeader = document.createElement('th');
 					thead.appendChild(tableHeader);
-
 					tableHeader.textContent = field.label;
 					if (field.sortable) {
 						var up = document.createElement('i');
@@ -29,8 +28,8 @@
 						tableHeader.appendChild(up);
 						tableHeader.appendChild(down);
 					}
-					tableElement.appendChild(tableHeader);
 				});
+				tableElement.appendChild(thead);
 				var tbody = document.createElement('tbody');
 				datas.forEach(function(data) {
 					var tableRow = document.createElement('tr');
