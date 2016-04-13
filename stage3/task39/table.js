@@ -5,22 +5,14 @@
 		var table = {
 			schema: schema,
 			datas: datas,
+			tableTemplate: document.querySelector(id),
 			init: function(schema, datas) {
 				var that = this;
-				var tableElement = document.querySelector(id);
+				var tableElement = this.tableTemplate;
 				tableElement.innerHTML = '';
 				var thead = document.createElement('thead');
 				thead.style.backgroundColor = 'grey';
 				var tbody = document.createElement('tbody');
-				if (that.schema.freezeTableHeader) {
-					thead.style.width = tableElement.width;
-					//thead.style.position = 'fixed';
-					tbody.style.overflowX = 'hidden';
-					tbody.style.overflowY = 'auto';
-					window.onscroll = function (event) {
-						console.log(window.pageYOffset);
-					}
-				}
 				schema.fields.forEach(function(field) {
 					var tableHeader = document.createElement('th');
 					tableHeader.textContent = field.label;
@@ -39,7 +31,6 @@
 						tableHeader.appendChild(up);
 						tableHeader.appendChild(down);
 					}
-
 				});
 				tableElement.appendChild(thead);
 				datas.forEach(function(data) {
@@ -52,6 +43,7 @@
 					});
 				});
 				tableElement.appendChild(tbody);
+				this.freeze();
 			},
 			sort: function(sortKey, direction, callback) {
 				if (callback) {
@@ -66,6 +58,32 @@
 					});
 				}
 				this.init(this.schema, this.datas);
+			},
+			freeze: function() {
+				if (this.schema.freezeTableHeader) {
+					this.tableTemplate.children[0].style.width = this.tableTemplate.width;
+					this.tableTemplate.children[0].style.position = 'fixed';
+					this.tableTemplate.children[1].style.display = 'block';
+					this.tableTemplate.children[1].style.height = this.tableTemplate.offsetHeight / 3 + 'px';
+					this.tableTemplate.children[1].style.overflow = 'scroll';
+					var th = this.tableTemplate.children[0];
+					var tbody = this.tableTemplate.children[1];
+					var that = this;
+					tbody.onscroll = function(event) {
+						console.log(tbody.scrollTop);
+						/*
+						if (tbody.scrollTop > th.offsetHeight) {
+							that.datas.shift();
+							that.init(that.schema, that.datas);
+						}
+						*/
+						if (tbody.scrollTop + 1 >= 
+							(tbody.scrollHeight - tbody.offsetHeight)) {
+							that.init({}, []);
+						}
+						
+					}
+				}
 			}
 		};
 		table.sort(schema.fields[1].name, 'desc');
