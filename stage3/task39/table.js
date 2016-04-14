@@ -43,7 +43,25 @@
 					});
 				});
 				tableElement.appendChild(tbody);
-				this.freeze();
+				if (this.schema.freezeTableHeader) {
+					this.freeze();
+				}
+			},
+			redraw: function() {
+				var that = this;
+				var tableElement = this.tableTemplate;
+				var tbody = this.tableTemplate.children[1];
+				tbody.innerHTML = '';
+				this.datas.forEach(function(data) {
+					var tableRow = document.createElement('tr');
+					that.schema.fields.forEach(function(field) {
+						var tableData = document.createElement('td');
+						tableData.textContent = data[field.name];
+						tableRow.appendChild(tableData);
+						tbody.appendChild(tableRow);
+					});
+				});
+				tableElement.appendChild(tbody);
 			},
 			sort: function(sortKey, direction, callback) {
 				if (callback) {
@@ -60,28 +78,23 @@
 				this.init(this.schema, this.datas);
 			},
 			freeze: function() {
-				if (this.schema.freezeTableHeader) {
-					this.tableTemplate.children[0].style.width = this.tableTemplate.width;
-					this.tableTemplate.children[0].style.position = 'fixed';
-					this.tableTemplate.children[1].style.display = 'block';
-					this.tableTemplate.children[1].style.height = this.tableTemplate.offsetHeight / 3 + 'px';
-					this.tableTemplate.children[1].style.overflow = 'scroll';
-					var th = this.tableTemplate.children[0];
-					var tbody = this.tableTemplate.children[1];
-					var that = this;
-					tbody.onscroll = function(event) {
-						console.log(tbody.scrollTop);
-						/*
-						if (tbody.scrollTop > th.offsetHeight) {
-							that.datas.shift();
-							that.init(that.schema, that.datas);
-						}
-						*/
-						if (tbody.scrollTop + 1 >= 
-							(tbody.scrollHeight - tbody.offsetHeight)) {
-							that.init({}, []);
-						}
-						
+				this.tableTemplate.children[0].style.width = this.tableTemplate.width;
+				this.tableTemplate.children[0].style.position = 'fixed';
+				this.tableTemplate.children[1].style.display = 'block';
+				this.tableTemplate.children[1].style.height = this.tableTemplate.offsetHeight / 3 + 'px';
+				this.tableTemplate.children[1].style.overflow = 'scroll';
+				var th = this.tableTemplate.children[0];
+				var tbody = this.tableTemplate.children[1];
+				var that = this;
+				tbody.onscroll = function(event) {
+					if (tbody.scrollTop > th.offsetHeight) {
+						var height = tbody.offsetHeight - th.offsetHeight;
+						tbody.style.height = height + 'px';
+						that.datas.shift();
+						that.redraw();
+					}
+					if (tbody.offsetHeight <= th.offsetHeight) {
+						that.init({}, []);
 					}
 				}
 			}
