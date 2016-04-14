@@ -10,6 +10,10 @@
 				var that = this;
 				var tableElement = this.tableTemplate;
 				tableElement.innerHTML = '';
+				if (schema === null) {
+					tableElement.remove();
+					return;
+				}
 				var thead = document.createElement('thead');
 				thead.style.backgroundColor = 'grey';
 				var tbody = document.createElement('tbody');
@@ -94,7 +98,7 @@
 						that.redraw();
 					}
 					if (tbody.offsetHeight <= th.offsetHeight) {
-						that.init({}, []);
+						that.init(null, []);
 					}
 				}
 			}
