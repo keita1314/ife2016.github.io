@@ -1,0 +1,25 @@
+.two-item-first {
+  -webkit-clip-path: polygon(0 0, 266.66667px 0, 133.33333px 100%, 0 100%);
+          clip-path: polygon(0 0, 266.66667px 0, 133.33333px 100%, 0 100%); }
+
+.two-item-last {
+  -webkit-clip-path: polygon(266.66667px 0, 100% 0, 100% 100%, 133.33333px 100%);
+          clip-path: polygon(266.66667px 0, 100% 0, 100% 100%, 133.33333px 100%);
+  margin-left: -400px; }
+
+.three-item-first {
+  -webkit-clip-path: polygon(0 0, 266.66667px 0, 266.66667px 100%, 0 100%);
+          clip-path: polygon(0 0, 266.66667px 0, 266.66667px 100%, 0 100%);
+}
+
+.three-item-right-top {
+  -webkit-clip-path: polygon(266.66667px 0, 100% 0, 100% 200px, 266.66667px 200px);
+          clip-path: polygon(266.66667px 0, 100% 0, 100% 200px, 266.66667px 200px);
+  margin-left: -400px;
+}
+
+.three-item-right-bottom {
+  -webkit-clip-path: polygon(266.66667px 200px, 100% 200px, 100% 100%, 266.66667px 100%);
+          clip-path: polygon(266.66667px 200px, 100% 200px, 100% 100%, 266.66667px 100%);
+  margin-left: -400px;
+}
