@@ -8,18 +8,25 @@
   margin-left: -400px; }
 
 .three-item-first {
-  -webkit-clip-path: polygon(0 0, 266.66667px 0, 266.66667px 100%, 0 100%);
-          clip-path: polygon(0 0, 266.66667px 0, 266.66667px 100%, 0 100%);
-}
+  width: 266.66667px;
+  height: 600px;
+  background-size: cover;
+  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg); }
 
 .three-item-right-top {
-  -webkit-clip-path: polygon(266.66667px 0, 100% 0, 100% 200px, 266.66667px 200px);
-          clip-path: polygon(266.66667px 0, 100% 0, 100% 200px, 266.66667px 200px);
-  margin-left: -400px;
-}
+  width: 133.33333px;
+  height: 300px;
+  background-size: cover;
+  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXp2IDGzkAAtAdoHP3Z0AAP4-gB4rR4AC0CO447.jpg);
+  position: absolute;
+  top: 0px;
+  right: 0px; }
 
 .three-item-right-bottom {
-  -webkit-clip-path: polygon(266.66667px 200px, 100% 200px, 100% 100%, 266.66667px 100%);
-          clip-path: polygon(266.66667px 200px, 100% 200px, 100% 100%, 266.66667px 100%);
-  margin-left: -400px;
-}
+  width: 133.33333px;
+  height: 300px;
+  background-size: cover;
+  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0F/04/ChMkJ1begQSICogEAAlihJFQRbgAAM7vQOyjrkACWKc429.jpg);
+  position: absolute;
+  bottom: 0px;
+  right: 0px; }

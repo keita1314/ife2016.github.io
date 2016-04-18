@@ -1,11 +1,11 @@
 $width: 400px;
-$height: 400px;
+$height: 600px;
 $one-third-width: 1 / 3* $width;
 $two-third-width: 2 / 3* $width;
 $one-third-height: 1 / 3* $height;
 $two-third-height: 2 / 3* $height;
 $half-width: 1 / 2 * $width;
-$half-height: 1 / 2 * $width;
+$half-height: 1 / 2 * $height;
 
 .two-item-first {
  clip-path: polygon(0 0, $two-third-width 0, $one-third-width 100%, 0 100%);
@@ -16,18 +16,28 @@ $half-height: 1 / 2 * $width;
 }
 
 .three-item-first {
- clip-path: polygon(0 0, $two-third-width 0, $two-third-width 100%, 0 100%);
- background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg)
+ width: $two-third-width;
+ height: $height;
+ background-size: cover;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
 }
 
 .three-item-right-top {
- clip-path: polygon($two-third-width 0, 100% 0, 100% $half-height, $two-third-width  $half-height);
- margin-left: -$width;
- background-imgae: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXp2IDGzkAAtAdoHP3Z0AAP4-gB4rR4AC0CO447.jpg)
+ width: $one-third-width;
+ height: $half-height;
+ background-size: cover;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXp2IDGzkAAtAdoHP3Z0AAP4-gB4rR4AC0CO447.jpg);
+ position: absolute;
+ top: 0px;
+ right: 0px;
 }
 
 .three-item-right-bottom {
- clip-path: polygon($two-third-width $half-width, 100% $half-width, 100% 100%, $two-third-width 100%);
- margin-left: -$width;
- background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0F/04/ChMkJ1begQSICogEAAlihJFQRbgAAM7vQOyjrkACWKc429.jpg)
+ width: $one-third-width;
+ height: $half-height;
+ background-size: cover;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0F/04/ChMkJ1begQSICogEAAlihJFQRbgAAM7vQOyjrkACWKc429.jpg);
+ position: absolute;
+ bottom: 0px;
+ right: 0px;
 }
