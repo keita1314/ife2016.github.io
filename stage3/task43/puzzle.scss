@@ -1,11 +1,12 @@
-$width: 400px;
-$height: 600px;
+$width: 100%;
+$height: 800px;
 $one-third-width: 1 / 3* $width;
 $two-third-width: 2 / 3* $width;
 $one-third-height: 1 / 3* $height;
 $two-third-height: 2 / 3* $height;
 $half-width: 1 / 2 * $width;
 $half-height: 1 / 2 * $height;
+
 
 .two-item-first {
  clip-path: polygon(0 0, $two-third-width 0, $one-third-width 100%, 0 100%);
@@ -19,6 +20,8 @@ $half-height: 1 / 2 * $height;
  width: $two-third-width;
  height: $height;
  background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
 }
 
@@ -26,6 +29,8 @@ $half-height: 1 / 2 * $height;
  width: $one-third-width;
  height: $half-height;
  background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXp2IDGzkAAtAdoHP3Z0AAP4-gB4rR4AC0CO447.jpg);
  position: absolute;
  top: 0px;
@@ -36,8 +41,175 @@ $half-height: 1 / 2 * $height;
  width: $one-third-width;
  height: $half-height;
  background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center;
  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0F/04/ChMkJ1begQSICogEAAlihJFQRbgAAM7vQOyjrkACWKc429.jpg);
  position: absolute;
  bottom: 0px;
  right: 0px;
+}
+
+.four-item-top-left {
+ width: $half-width;
+ height: $half-height;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
+ position: absolute;
+ top: 0px;
+ left: 0px;
+}
+
+.four-item-top-right {
+ width: $half-width;
+ height: $half-height;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
+ position: absolute;
+ top: 0px;
+ right: 0px;
+}
+
+.four-item-bottom-left {
+ width: $half-width;
+ height: $half-height;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
+ position: absolute;
+ bottom: 0px;
+ left: 0px;
+}
+
+.four-item-bottom-right {
+ width: $half-width;
+ height: $half-height;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
+ position: absolute;
+ bottom: 0px;
+ right: 0px;
+}
+
+.five-item-left-top {
+ width: $two-third-width;
+ height: $two-third-height;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
+ position: absolute;
+ top: 0px;
+ left:0px;
+}
+
+.five-item-left-bottom-left {
+ width: $one-third-width;
+ height: $one-third-height;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
+ position: absolute;
+ bottom: 0px;
+ left:0px;
+}
+
+.five-item-left-bottom-right {
+ width: $one-third-width;
+ height: $one-third-height;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
+ position: absolute;
+ bottom: 0px;
+ left: $one-third-width;
+}
+
+.five-item-right-top {
+ width: $one-third-width;
+ height: $one-third-height;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
+ position: absolute;
+ top: 0px;
+ right:0px;
+}
+
+.five-item-right-bottom {
+ width: $one-third-width;
+ height: $two-third-height;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
+ position: absolute;
+ bottom: 0px;
+ right:0px;
+}
+
+.six-item-left-top {
+ width: $two-third-width;
+ height: $two-third-height;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
+ position: absolute;
+ top: 0px;
+ left:0px;
+}
+
+.six-item-left-bottom-left {
+ width: $one-third-width;
+ height: $one-third-height;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
+ position: absolute;
+ bottom: 0px;
+ left:0px;
+}
+
+.six-item-left-bottom-right {
+ width: $one-third-width;
+ height: $one-third-height;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
+ position: absolute;
+ bottom: 0px;
+ left: $one-third-width;
+}
+
+.six-item-right-top {
+ width: $one-third-width;
+ height: $one-third-height;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
+ position: absolute;
+ top: 0px;
+ right:0px;
+}
+
+.six-item-right-middle {
+ width: $one-third-width;
+ height: $one-third-height;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
+ position: absolute;
+ bottom: $one-third-height;
+ right:0px;
+}
+
+.six-item-right-bottom {
+ width: $one-third-width;
+ height: $one-third-height;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
+ position: absolute;
+ bottom: 0px;
+ right:0px;
 }
