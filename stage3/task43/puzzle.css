@@ -1,190 +1,178 @@
-.two-item-first {
+.one-item {
+  width: 100%;
+  height: 100%; }
+
+.two-item-1 {
+  width: 100%;
+  height: 100%;
   -webkit-clip-path: polygon(0 0, 66.66667% 0, 33.33333% 100%, 0 100%);
-          clip-path: polygon(0 0, 66.66667% 0, 33.33333% 100%, 0 100%); }
+          clip-path: polygon(0 0, 66.66667% 0, 33.33333% 100%, 0 100%);
+  float: left; }
 
-.two-item-last {
+.two-item-2 {
+  width: 100%;
+  height: 100%;
   -webkit-clip-path: polygon(66.66667% 0, 100% 0, 100% 100%, 33.33333% 100%);
-          clip-path: polygon(66.66667% 0, 100% 0, 100% 100%, 33.33333% 100%);
-  margin-left: -100%; }
+          clip-path: polygon(66.66667% 0, 100% 0, 100% 100%, 33.33333% 100%); }
 
-.three-item-first {
+.three-item-1 {
   width: 66.66667%;
-  height: 800px;
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg); }
+  background-position: center; }
 
-.three-item-right-top {
+.three-item-2 {
   width: 33.33333%;
-  height: 400px;
+  height: 50%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXp2IDGzkAAtAdoHP3Z0AAP4-gB4rR4AC0CO447.jpg);
   position: absolute;
   top: 0px;
   right: 0px; }
 
-.three-item-right-bottom {
+.three-item-3 {
   width: 33.33333%;
-  height: 400px;
+  height: 50%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0F/04/ChMkJ1begQSICogEAAlihJFQRbgAAM7vQOyjrkACWKc429.jpg);
   position: absolute;
   bottom: 0px;
   right: 0px; }
 
-.four-item-top-left {
+.four-item-1 {
   width: 50%;
-  height: 400px;
+  height: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
   position: absolute;
   top: 0px;
   left: 0px; }
 
-.four-item-top-right {
+.four-item-2 {
   width: 50%;
-  height: 400px;
+  height: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
   position: absolute;
   top: 0px;
   right: 0px; }
 
-.four-item-bottom-left {
+.four-item-3 {
   width: 50%;
-  height: 400px;
+  height: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
   position: absolute;
   bottom: 0px;
   left: 0px; }
 
-.four-item-bottom-right {
+.four-item-4 {
   width: 50%;
-  height: 400px;
+  height: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
   position: absolute;
   bottom: 0px;
   right: 0px; }
 
-.five-item-left-top {
+.five-item-1 {
   width: 66.66667%;
-  height: 533.33333px;
+  height: 66.66667%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
   position: absolute;
   top: 0px;
   left: 0px; }
 
-.five-item-left-bottom-left {
+.five-item-2 {
   width: 33.33333%;
-  height: 266.66667px;
+  height: 33.33333%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
   position: absolute;
   bottom: 0px;
   left: 0px; }
 
-.five-item-left-bottom-right {
+.five-item-3 {
   width: 33.33333%;
-  height: 266.66667px;
+  height: 33.33333%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
   position: absolute;
   bottom: 0px;
   left: 33.33333%; }
 
-.five-item-right-top {
+.five-item-4 {
   width: 33.33333%;
-  height: 266.66667px;
+  height: 33.33333%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
   position: absolute;
   top: 0px;
   right: 0px; }
 
-.five-item-right-bottom {
+.five-item-5 {
   width: 33.33333%;
-  height: 533.33333px;
+  height: 66.66667%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
   position: absolute;
   bottom: 0px;
   right: 0px; }
 
-.six-item-left-top {
+.six-item-1 {
   width: 66.66667%;
-  height: 533.33333px;
+  height: 66.66667%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
   position: absolute;
   top: 0px;
   left: 0px; }
 
-.six-item-left-bottom-left {
+.six-item-2 {
   width: 33.33333%;
-  height: 266.66667px;
+  height: 33.33333%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
   position: absolute;
   bottom: 0px;
   left: 0px; }
 
-.six-item-left-bottom-right {
+.six-item-3 {
   width: 33.33333%;
-  height: 266.66667px;
+  height: 33.33333%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
   position: absolute;
   bottom: 0px;
   left: 33.33333%; }
 
-.six-item-right-top {
+.six-item-4 {
   width: 33.33333%;
-  height: 266.66667px;
+  height: 33.33333%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
   position: absolute;
   top: 0px;
   right: 0px; }
 
-.six-item-right-middle {
+.six-item-5 {
   width: 33.33333%;
-  height: 266.66667px;
+  height: 33.33333%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
   position: absolute;
-  bottom: 266.66667px;
+  bottom: 33.33333%;
   right: 0px; }
 
-.six-item-right-bottom {
+.six-item-6 {
   width: 33.33333%;
-  height: 266.66667px;
+  height: 33.33333%;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(http://desk.fd.zol-img.com.cn/t_s1280x800c5/g5/M00/0E/09/ChMkJ1cPXpyIYk5tAAJP8Uw9NPoAAP4-gALFPUAAlAJ260.jpg);
   position: absolute;
   bottom: 0px;
   right: 0px; }
-
-/*# sourceMappingURL=to.css.map */
